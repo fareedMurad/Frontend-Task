@@ -1,4 +1,4 @@
-# React Webpack Typescript Starter
+# React Typescript SASS Starter
 Minimal starter kit with hot module replacement for fast development.
 
 **Main features**
