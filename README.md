@@ -13,6 +13,7 @@ Minimal starter kit with hot module replacement for fast development.
 **Additional features**
 * Image loading/minification using [Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader)
 * Typescript compiling using [Awesome Typescript Loader](https://github.com/s-panferov/awesome-typescript-loader) (3.x)
+* Css-loader modules, SCSS styles are imported and hashed to avoid polluting global css
 * Code quality (linting)
   * Typescript - [TSLint](https://palantir.github.io/tslint/) (5.x)
   * SASS/CSS - [stylelint](http://stylelint.io/) (rules: [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard))
@@ -27,7 +28,7 @@ Minimal starter kit with hot module replacement for fast development.
 `npm start`
 
 * Compiles the app
-* Starts a web server hosting the app @ `http://localhost:8080`
+* Starts a web server hosting the app @ `http://localhost:5000`
 * Watches for changes and injects them using hot module replacement (without reloading the browser)
 
 **Other commands**
@@ -37,10 +38,8 @@ Minimal starter kit with hot module replacement for fast development.
 * `npm run test` - Run tests (Jest)
 
 ## Resources
-* [Create React App (by FaceBook)](https://github.com/facebookincubator/create-react-app) - Good starting point when learning React
-* [Webpack & Typescript](https://webpack.js.org/guides/webpack-and-typescript)
+* [react-webpack-typescript-starter](https://github.com/vikpe/react-webpack-typescript-starter) - the fork source by vikpe
 
 ## TODO
 * [ ] Build script
   * [ ] Asset revisioning / cache bursting
-* [ ] React router

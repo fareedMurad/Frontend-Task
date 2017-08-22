@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-typescript-starter",
-  "version": "0.1.0",
-  "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript and Babel.",
+  "name": "react-webpack-sass-starter",
+  "version": "1.0.0",
+  "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript, SASS, jest and Babel.",
   "keywords": [
     "react",
     "webpack",
@@ -10,18 +10,19 @@
     "sass",
     "hmr",
     "starter",
-    "boilerplate"
+    "boilerplate",
+    "jest"
   ],
-  "author": "Viktor Persson",
+  "author": "Jian Guo",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "url": "git+https://github.com/JianGuo222/react-typescript-sass-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-typescript-starter/issues"
+    "url": "https://github.com/JianGuo222/react-typescript-sass-starter/pulls"
   },
-  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
+  "homepage": "https://github.com/JianGuo222/react-typescript-sass-starter",
   "scripts": {
     "lint": "npm run lint:ts && npm run lint:sass",
     "lint:ts": "tslint './src/**/*.ts*' --format stylish --force",

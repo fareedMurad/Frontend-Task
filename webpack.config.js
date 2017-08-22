@@ -9,7 +9,7 @@ module.exports = {
     },
     entry:   [
         "react-hot-loader/patch", // activate HMR for React
-        "webpack-dev-server/client?http://localhost:8080",// bundle the client for webpack-dev-server and connect to the provided endpoint
+        "webpack-dev-server/client?http://localhost:5000",// bundle the client for webpack-dev-server and connect to the provided endpoint
         "webpack/hot/only-dev-server", // bundle the client for hot reloading, only- means to only hot reload for successful updates
         "./index.tsx" // the entry point of our app
     ],
@@ -43,9 +43,24 @@ module.exports = {
                 test: /\.css$/,
                 use:  ["style-loader", "css-loader?modules", "postcss-loader",],
             },
+            // {
+            //     test:    /\.scss$/,
+            //     loaders: ["style-loader", "css-loader?modules", "postcss-loader", "sass-loader"]
+            // },
             {
-                test:    /\.scss$/,
-                loaders: ["style-loader", "css-loader?modules", "postcss-loader", "sass-loader"]
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        query: {
+                            modules: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                    }
+                ],
             },
             {
                 test:    /\.(jpe?g|png|gif|svg)$/i,
