@@ -7,11 +7,11 @@ export interface AppProps {
 }
 
 export default class App extends React.Component<AppProps, undefined> {
-    render() {
-        return <div className={`app ${styles.app}`}>
-            <img src={reactLogo}/>
-            <h1>Hello World!</h1>
-            <p className="btn btn-primary">Foo to the barz</p>
-        </div>;
-    }
+  render() {
+    return <div className={`app ${styles.app}`}>
+      <img src={reactLogo} />
+      <h1>Hello World!</h1>
+      <p className="btn btn-primary">Foo to the barz</p>
+    </div>;
+  }
 }
