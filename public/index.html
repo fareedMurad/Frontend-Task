@@ -2,14 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Hello React!</title>
+    <!--[if IE 9 ]>
+      <script src="js/matchMedia.js"></script>
+      <script src="js/matchMedia.addListener.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="css/ie8fix.css" />
+    <![endif]-->
   </head>
   <body>
+    <div class="ie8msg" style="display: none;">Oops, looks like you are using IE 8 and below, please upgrade your browser to view our site.</div>
     <div id="root"></div>
-
-    <!-- Dependencies -->
-    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
 
     <!-- Main -->
     <script src="../bundle.js"></script>

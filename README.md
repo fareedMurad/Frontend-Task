@@ -9,6 +9,7 @@ Minimal starter kit with hot module replacement for fast development.
 * [Babel](http://babeljs.io/) (6.x)
 * [SASS](http://sass-lang.com/)
 * [Jest](https://facebook.github.io/jest/) - Testing framework for React applications
+* [Bootstrap 4.0 beta](https://getbootstrap.com/)
 
 **Additional features**
 * Image loading/minification using [Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader)

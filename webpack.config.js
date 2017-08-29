@@ -18,6 +18,7 @@ module.exports = {
         path:       resolve(__dirname, "public"),
         publicPath: "/" // necessary for HMR to know where to load the hot update chunks
     },
+    cache: true,
 
     context: resolve(__dirname, "src"),
     devtool: "source-map",
@@ -25,7 +26,9 @@ module.exports = {
     devServer: {
         hot:         true, // enable HMR on the server
         contentBase: resolve(__dirname, "public"), // match the output path
-        publicPath:  "/" // match the output `publicPath`
+        publicPath:  "/", // match the output `publicPath`
+        port: 5000,
+        host: "0.0.0.0"
     },
 
     module: {
@@ -39,26 +42,54 @@ module.exports = {
                 test: /\.tsx?$/,
                 use:  "awesome-typescript-loader"
             },
-            {
-                test: /\.css$/,
-                use:  ["style-loader", "css-loader?modules", "postcss-loader",],
-            },
             // {
-            //     test:    /\.scss$/,
-            //     loaders: ["style-loader", "css-loader?modules", "postcss-loader", "sass-loader"]
+            //     test: /\.css$/,
+            //     use:  ["style-loader", "css-loader?modules", "postcss-loader",],
             // },
             {
-                test: /\.scss$/,
+                test: /(Index)\.scss$/,
                 use: [
-                    'style-loader',
+                    "style-loader",
+                    "css-loader",
                     {
-                        loader: 'css-loader',
+                        loader: "postcss-loader", // Run post css actions
+                        options: {
+                          plugins: function () { // post css plugins, can be exported to postcss.config.js
+                            return [
+                                require('precss'),
+                                require("autoprefixer")
+                            ];
+                          }
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                    }
+                ],
+            },
+            {
+                test: /\.scss$/,
+                exclude: /(Index)\.scss$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
                         query: {
                             modules: true
                         }
                     },
                     {
-                        loader: 'sass-loader',
+                        loader: "postcss-loader", // Run post css actions
+                        options: {
+                          plugins: function () { // post css plugins, can be exported to postcss.config.js
+                            return [
+                              require("autoprefixer")
+                            ];
+                          }
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
                     }
                 ],
             },
@@ -79,10 +110,10 @@ module.exports = {
         new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
 
     ],
-    externals:   {
-        "react":     "React",
-        "react-dom": "ReactDOM"
-    },
+    // externals:   {
+    //     "react":     "React",
+    //     "react-dom": "ReactDOM"
+    // },
     performance: {
         hints: false
     }
