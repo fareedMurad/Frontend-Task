@@ -11,7 +11,7 @@ export default class App extends React.Component<AppProps, undefined> {
         return <div className={`app ${styles.app}`}>
             <img src={reactLogo}/>
             <h1>Hello World!</h1>
-            <p>Foo to the barz</p>
+            <p className="btn btn-primary">Foo to the barz</p>
         </div>;
     }
 }
