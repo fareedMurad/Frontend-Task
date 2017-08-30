@@ -1,12 +1,12 @@
 import * as React from "react";
 
-const styles = require("./App.scss");
-const reactLogo = require("./react_logo.svg");
+const styles = require("./MyComponent.scss");
+const reactLogo = require("./img/react_logo.svg");
 
-export interface AppProps {
+export interface MyComponentProps {
 }
 
-export default class App extends React.Component<AppProps, undefined> {
+export default class MyComponent extends React.Component<MyComponentProps, undefined> {
   render() {
     return <div className={`app ${styles.app}`}>
       <img src={reactLogo} />

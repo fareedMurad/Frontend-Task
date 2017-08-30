@@ -1,14 +1,15 @@
 import * as React from "react";
 import { render } from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import App from "./components/App";
-import "./bootstrap/Index.scss";
+import MyComponent from "./components/MyComponent/MyComponent";
+// don't want to use css module for this global scss
+import "!style-loader!css-loader!sass-loader!./bootstrap/Index.scss";
 
 const rootEl = document.getElementById("root");
 
 render(
   <AppContainer>
-    <App />
+    <MyComponent />
   </AppContainer>,
   rootEl
 );
@@ -17,8 +18,8 @@ render(
 declare let module: { hot: any };
 
 if (module.hot) {
-  module.hot.accept("./components/App", () => {
-    const NewApp = require("./components/App").default;
+  module.hot.accept("./components/MyComponent/MyComponent", () => {
+    const NewApp = require("./components/MyComponent/MyComponent").default;
 
     render(
       <AppContainer>
