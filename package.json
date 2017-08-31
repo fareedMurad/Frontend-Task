@@ -104,4 +104,9 @@
       "./config/jest/test-setup.js"
     ]
   }
+  // use this for npm publish to define scope and sinopia server
+  // "publishConfig": { 
+  //   "scope": "@csn",
+  //   "registry": "http://dev-web-01:4873"
+  // }
 }
