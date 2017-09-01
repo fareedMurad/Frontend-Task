@@ -5,3 +5,6 @@ coverage/
 src/**/*.jsx
 __tests__/**/*.jsx
 npm-debug.log
+lib/
+.vscode/
+/.vscode

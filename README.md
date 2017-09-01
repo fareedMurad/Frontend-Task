@@ -45,6 +45,18 @@ Command | Description
 `npm run lint:ts` | Run Typescript linter
 `npm run lint:sass` | Run SASS linter
 `npm run start` | (alias of `npm run start-dev`)
+`npm run start-publish` | Publish compiled code into lib folder
+
+## How to use it as npm package
+* `npm config set @scope:registry http://your-npm-server:4873`
+* `npm run start-publish`
+* Go to consumer project and `npm install @scope/MyComponent --save-dev`
+* `import MyComponent from "@scope/MyComponent ";`
+* use the component like this `<MyComponent ..Props />`
+
+## Contributors
+* Dao Yang Liew
+* Philippe Roy
 
 ## Resources
 * [react-webpack-typescript-starter](https://github.com/vikpe/react-webpack-typescript-starter) - the fork source by vikpe
