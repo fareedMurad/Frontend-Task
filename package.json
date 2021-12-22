@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-sass-starter",
+  "name": "test-task",
   "version": "0.0.1",
-  "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript, SASS, jest and Babel.",
+  "description": "Test Task",
   "keywords": [
     "react",
     "webpack",
@@ -13,18 +13,7 @@
     "boilerplate",
     "jest"
   ],
-  "author": "Jian Guo",
-  "contributors": [ "Dao Yang Liew", "Philippe Roy" ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JianGuo222/react-typescript-sass-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/JianGuo222/react-typescript-sass-starter/pulls"
-  },
-  "homepage": "https://github.com/JianGuo222/react-typescript-sass-starter",
-  "main": "./index.js",
+  "author": "Fareed Murad",
   "scripts": {
     "build": "babel-node --presets es2015 --eval \"require('./tools/copy').default()\" && webpack -p --env=prod",
     "lint": "npm run lint:ts && npm run lint:sass",
@@ -58,13 +47,13 @@
     "image-webpack-loader": "^3.3.0",
     "jest": "^20.0.4",
     "ncp": "^2.0.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.14.1",
     "postcss-loader": "^2.0.6",
     "react": "^15.6.1",
     "react-addons-test-utils": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-hot-loader": "^3.0.0-beta.7",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.18.2",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
@@ -75,8 +64,7 @@
     "webpack-dev-server": "^2.7.1",
     "webpack-merge": "^4.1.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "jest": {
     "moduleFileExtensions": [
       "ts",
@@ -105,9 +93,5 @@
     "setupFiles": [
       "./config/jest/test-setup.js"
     ]
-  },
-  "publishConfig //use this for npm publish to define scope and sinopia server": { 
-    "scope": "@your-scope",
-    "registry": "http://your-npm-server:4873"
   }
 }
